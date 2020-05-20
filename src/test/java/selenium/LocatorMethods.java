@@ -2,15 +2,12 @@ package selenium;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.sl.In;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +21,7 @@ public class LocatorMethods {
     public static WebDriverWait wait;
 
 
-    @Before
+//    @Before
     public void setDriver() throws IOException {
         System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
         driver=new ChromeDriver();
@@ -40,7 +37,7 @@ public class LocatorMethods {
         locatorType.load(inputStream2);
     }
 
-    @AfterMethod
+//    @After
     void quit() {
         driver.quit();
     }
