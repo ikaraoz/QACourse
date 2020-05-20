@@ -50,10 +50,11 @@ to perform actions on them.
          */
 
         driver.findElementByAccessibilityId("Fade in").click();
-        Thread.sleep(500);
+        Thread.sleep(5000);
         driver.findElementByAccessibilityId("List dialog").click();
         Thread.sleep(500);
         driver.findElementByXPath("//*[@text='Command one']").click();
+        driver.quit();
 
         /*
         Pretty much similar to what we are doing with the selenium. Instead of initialising
