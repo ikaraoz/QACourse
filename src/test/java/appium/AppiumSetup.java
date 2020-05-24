@@ -5,15 +5,15 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import org.junit.Test;
-=======
+//=======
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
->>>>>>> upstream/master
+//>>>>>>> upstream/master
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,21 +26,21 @@ import java.util.List;
 import java.util.Properties;
 
 public class AppiumSetup {
-<<<<<<< HEAD
-    static AppiumDriver driver;
+//<<<<<<< HEAD
+   // static AppiumDriver driver;
     //Both androiddriver and the iosdriver extends from AppiumDriver.
     //If the tests will be used for two different platforms,
     // then it might be good to use AppiumDriver. This is where the request is going
 
-=======
->>>>>>> upstream/master
+//=======
+//>>>>>>> upstream/master
 
     private static final Properties locatorId = new Properties();
     private static final Properties locatorType = new Properties();
     private static final Properties apps=new Properties();
 
-<<<<<<< HEAD
-    public static void setup() throws MalformedURLException, InterruptedException {
+//<<<<<<< HEAD
+  /*  public static void setup() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities(); //This is setting up a new set of Desiredcapabilities.
 
@@ -52,22 +52,22 @@ public class AppiumSetup {
      //   caps.setCapability("appActivity", ".ApiDemos");
       caps.setCapability("appActivity", ".app.Animation");
 
-/*
+
 The package and page information can be found from the info details of the app
 In mobile app, each page is an activity, and we find and set these as capacbilities
 to perform actions on them.
- */
+
         URL url = new URL("http://localhost:4723/wd/hub");
         /*
         This is the servers' url.
-         */
+
         URL url2 = new URL("http://127.0.0.1:4723/wd/hub");
         URL url3 = new URL("http://0.0.0.0:4723/wd/hub");
 
         driver = new AndroidDriver(url, caps);
         /*
         This is initialising the driver.
-         */
+
 
         driver.findElementByAccessibilityId("Fade in").click();
         Thread.sleep(5000);
@@ -81,8 +81,9 @@ to perform actions on them.
         websdriver, we are running AppiumDriver.
         Finding the elements is the same. You find the element and then do operations on it.
         To find the id, or to inspect the element, we go and find it through the Appium session.
-         */
-=======
+
+//====
+    */
     public static AppiumDriver<MobileElement> driver;
     public static WebDriverWait wait;
 
@@ -121,7 +122,7 @@ to perform actions on them.
 
         InputStream inputStream2=getClass().getClassLoader().getResourceAsStream("locatorType.properties");
         locatorType.load(inputStream2);
->>>>>>> upstream/master
+//>>>>>>> upstream/master
 
         InputStream inputStream3=getClass().getClassLoader().getResourceAsStream("apps.properties");
         apps.load(inputStream3);
